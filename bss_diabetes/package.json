@@ -1,0 +1,15 @@
+{
+  "name": "bss_diabetes",
+  "version": "1.0.0",
+  "description": "University project for analysis of blood sugar levels",
+  "main": "index.js",
+  "dependencies": {
+    "chart.js": "^2.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
