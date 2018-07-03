@@ -19,6 +19,7 @@ def register_extensions(app):
     bootstrap.init_app(app)
     asset_environment.init_app(app)
     debug_toolbar.init_app(app)
+    database.init_app(app)
 
 
 def register_blueprints(app):
