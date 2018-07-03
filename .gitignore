@@ -5,6 +5,8 @@ node_modules
 __pycache__/
 *.py[cod]
 *$py.class
+manifest.json
+**/workspace.xml
 
 # C extensions
 *.so
