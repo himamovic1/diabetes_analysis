@@ -1,10 +1,10 @@
 {
   "assets": {
-    "main_css.js": "main_css.28e55d62df91dc537d41.js",
-    "main_css.css": "main_css.28e55d62df91dc537d41.css",
-    "main_css.map": "main_css.28e55d62df91dc537d41.css.map",
-    "main_js.js": "main_js.28e55d62df91dc537d41.js",
-    "main_js.map": "main_js.28e55d62df91dc537d41.js.map"
+    "main_js.js": "main_js.74a3bbdd4cba1d823af4.js",
+    "main_js.map": "main_js.74a3bbdd4cba1d823af4.js.map",
+    "main_css.js": "main_css.74a3bbdd4cba1d823af4.js",
+    "main_css.css": "main_css.74a3bbdd4cba1d823af4.css",
+    "main_css.map": "main_css.74a3bbdd4cba1d823af4.css.map"
   },
   "publicPath": ""
 }
