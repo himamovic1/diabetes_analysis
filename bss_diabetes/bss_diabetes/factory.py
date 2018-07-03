@@ -17,7 +17,6 @@ def create_app(config_file):
 def register_extensions(app):
     """ Registers app level extensions """
     bootstrap.init_app(app)
-    asset_environment.init_app(app)
     debug_toolbar.init_app(app)
     database.init_app(app)
 
