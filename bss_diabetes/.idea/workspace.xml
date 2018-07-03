@@ -19,11 +19,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< Updated upstream
       <file leaf-file-name="patient_data.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bss_diabetes/models/patient_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+=======
+      <file leaf-file-name="processed-hungarian.data" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Heart-Disease-Data/processed-data/processed-hungarian.data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientData.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bss_diabetes/PatientData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -59,10 +76,15 @@
         <option value="$PROJECT_DIR$/bss_diabetes/config/base.cfg" />
         <option value="$PROJECT_DIR$/bss_diabetes/extensions.py" />
         <option value="$PROJECT_DIR$/bss_diabetes/factory.py" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/bss_diabetes/models/core.py" />
         <option value="$PROJECT_DIR$/bss_diabetes/models/patient.py" />
         <option value="$PROJECT_DIR$/db_init.py" />
         <option value="$PROJECT_DIR$/bss_diabetes/models/patient_data.py" />
+=======
+        <option value="$PROJECT_DIR$/Heart-Disease-Data/process.py" />
+        <option value="$PROJECT_DIR$/bss_diabetes/PatientData.py" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -241,13 +263,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< Updated upstream
     <editor active="true" />
+=======
+>>>>>>> Stashed changes
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23883928" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Version Control" order="7" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.14356436" />
@@ -261,6 +290,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
@@ -268,12 +298,19 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+=======
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32905984" />
+=======
+>>>>>>> Stashed changes
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,6 +529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Diabetes-Data/Data-Codes">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="106">
           <caret line="25" column="2" selection-start-line="25" selection-end-line="25" selection-end-column="2" />
         </state>
@@ -501,13 +539,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+=======
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bss_diabetes/extensions.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="144">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+=======
+        <state relative-caret-position="80">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -541,6 +588,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="48">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
@@ -560,6 +608,31 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="270">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heart-Disease-Data/process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heart-Disease-Data/processed-data/processed-hungarian.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bss_diabetes/PatientData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

@@ -1,7 +1,12 @@
-def patient_data:
+from bss_diabetes.extensions import database as db
+from bss_diabetes.models.core import Model
+from bss_diabetes.models.utils import parse_int
+
+
+class PatientData(Model):
     __tablename__ = 'patient_data'
 
-    id = db.Column(db.Integer,  primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
 
     age = db.Column(db.Integer, unique=False, nullable=True)
     sex = db.Column(db.Integer, unique=False, nullable=True)
@@ -13,15 +18,38 @@ def patient_data:
     diabetes_history = db.Column(db.Integer, unique=False, nullable=True)
     num = db.Column(db.Integer, unique=False, nullable=True)
 
+    def __init__(self, age, sex, resting_blood_sugar, smoking, cigs_per_day,
+                 years_as_smoker, fbs, diabetes_history, num):
 
-    def __init__(self, age, sex, resting_blood_sugar, smoking, cigs_per_day, years_as_smoker, fbs, diabetes_history, num ):
-        self.age = age
-        self.sex = sex
-        self.resting_blood_sugar = resting_blood_sugar
-        self.smoking = smoking
-        self.cigs_per_day = cigs_per_day
-        self.years_as_smoker = years_as_smoker
-        self.fbs = fbs
-        self.diabetes_history = diabetes_history
-        self.num = num
+        self.sex = parse_int(sex)
+        self.age = parse_int(age)
+        self.resting_blood_sugar = parse_int(resting_blood_sugar)
+        self.smoking = parse_int(smoking)
+        self.cigs_per_day = parse_int(cigs_per_day)
+        self.years_as_smoker = parse_int(years_as_smoker)
+        self.fbs = parse_int(fbs)
+        self.diabetes_history = parse_int(diabetes_history)
+        self.num = parse_int(num)
 
+    @classmethod
+    def from_string(cls, line):
+        data = line.rstrip().lstrip().split(',')
+
+        try:
+            return cls(*data)
+        except (IndexError, TypeError) as e:
+            return None
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'age': self.age,
+            'sex': self.sex,
+            'resting_blood_sugar': self.resting_blood_sugar,
+            'smoking': self.smoking,
+            'cigs_per_day': self.cigs_per_day,
+            'years_as_smoker': self.years_as_smoker,
+            'fbs': self.fbs,
+            'diabetes_history': self.diabetes_history,
+            'num': self.num
+        }
