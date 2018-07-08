@@ -9,7 +9,7 @@
 {% block scripts %}
 {{ super() }}
 <script>
-    $(document).ready(function() {
+    $(function() {
         var ctx = $("#myChart");
         var myChart = app.homeCharts.render(ctx);
     });
