@@ -2,4 +2,16 @@
 
 {% block content %}
 <h1>Selam, Bootstrap</h1>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    $(document).ready(function() {
+        var ctx = $("#myChart");
+        var myChart = app.homeCharts.render(ctx);
+    });
+</script>
 {% endblock %}
