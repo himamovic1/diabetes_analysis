@@ -49,6 +49,7 @@ module.exports = {
     },
     output: {
         path: outputDir,
+        publicPath: '/static/build/',
         filename: filename_js,
         chunkFilename: chunkFilename_js,
         library: libraryName,
