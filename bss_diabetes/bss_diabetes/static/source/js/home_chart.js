@@ -1,5 +1,5 @@
-export homeCharts = {
-    render: function(ctx) {
+let homeCharts = {
+    render: function (ctx) {
         let myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -30,7 +30,7 @@ export homeCharts = {
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero: true
                         }
                     }]
                 }
@@ -39,4 +39,6 @@ export homeCharts = {
 
         return myChart;
     }
-}
+};
+
+export {homeCharts};
