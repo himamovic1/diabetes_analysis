@@ -2,20 +2,18 @@
 {% block title %}Diabetes Analysis{% endblock %}
 
 {% block styles %}
-{{ super() }}
-{{ stylesheet_tag('main_css') | safe }}
+    {{ super() }}
+    {{ stylesheet_tag('main_css') | safe }}
 {% endblock %}
 
 {% block navbar %}
-<div class="navbar navbar-fixed-top">
-    <!-- ... -->
-</div>
+    {% include 'sidebar.html' %}
 {% endblock %}
 
 {% block content %}
 {% endblock %}
 
 {% block scripts %}
-{{ super() }}
-{{ javascript_tag('main_js') | safe }}
+    {{ super() }}
+    {{ javascript_tag('main_js') | safe }}
 {% endblock %}

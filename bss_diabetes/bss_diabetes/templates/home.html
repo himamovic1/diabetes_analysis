@@ -1,17 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Selam, Bootstrap</h1>
-
-<canvas id="myChart" width="400" height="400"></canvas>
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-<script>
-    $(function() {
-        var ctx = $("#myChart");
-        var myChart = app.homeCharts.render(ctx);
-    });
-</script>
+    <div class="container text-center">
+        <h1>Welcome to the diabetes analytics</h1>
+    </div>
 {% endblock %}

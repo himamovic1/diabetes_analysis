@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Activity graph should go here</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <canvas id="activityChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $(function () {
+            var ctx = $("#activityChart");
+            var myChart = app.charts.activity.render(ctx);
+        });
+    </script>
+{% endblock %}
