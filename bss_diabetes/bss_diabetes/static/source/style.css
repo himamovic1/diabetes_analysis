@@ -1,0 +1,17 @@
+.page-sidebar {
+    margin-top: 20px;
+    text-align: right;
+    border-right: 1px solid #d6d6d6;
+    height: 100%;
+}
+
+.page-sidebar li {
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 15px 5px 0;
+}
+
+.page-sidebar li:hover {
+    border-right: 5px solid #4286f4;
+    padding-right: 10px;
+}
