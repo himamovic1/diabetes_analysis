@@ -1,43 +1,61 @@
 let dietCharts = {
-    render: function (ctx) {
-        let myChart = new Chart(ctx, {
-            type: 'bar',
+    render: function (ctx, bellowAverage, average, aboveAverage) {
+        const config = {
+            type: 'line',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: ['Prije doručka', 'Nakon doručka', 'Prije ručka', 'Nakon ručka', 'Prije večere', 'Nakon večere'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
+                    label: 'Manje nego inače',
+                    data: bellowAverage,
+                    borderColor: window.chartColors.blue,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    fill: false,
+                }, {
+                    label: 'Standarno',
+                    data: average,
+                    borderColor: window.chartColors.green,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    fill: false,
+                }, {
+                    label: 'Više nego inače',
+                    data: aboveAverage,
+                    borderColor: window.chartColors.red,
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    fill: false,
                 }]
             },
             options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Komparacija količine glukoze u krvi relativno na prehrambene navike'
+                },
+                tooltips: {
+                    mode: 'index'
+                },
                 scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true
+                        }
+                    }],
                     yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        },
                         ticks: {
-                            beginAtZero: true
+                            suggestedMin: 100,
+                            suggestedMax: 200,
                         }
                     }]
                 }
             }
-        });
+        };
 
-        return myChart;
+        return new Chart(ctx, config);
     }
 };
 

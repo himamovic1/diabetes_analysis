@@ -48,9 +48,8 @@ let activityChart = {
                 }
             }
         };
-        let chart = new Chart(ctx, config);
 
-        return chart;
+        return new Chart(ctx, config);
     }
 };
 
