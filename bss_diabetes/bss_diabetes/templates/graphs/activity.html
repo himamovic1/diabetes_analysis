@@ -14,10 +14,14 @@
 
 {% block scripts %}
     {{ super() }}
+
     <script>
         $(function () {
-            var ctx = $("#activityChart");
-            var myChart = app.charts.activity.render(ctx);
+            var dataActive = {{ active | safe }};
+            var dataInactive = {{ inactive | safe }};
+
+            var ctx = document.getElementById('activityChart').getContext('2d');
+            window.myLine = app.charts.activity.render(ctx, dataActive, dataInactive);
         });
     </script>
 {% endblock %}

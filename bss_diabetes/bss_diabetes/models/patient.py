@@ -3,23 +3,24 @@ from sqlalchemy.orm import relationship
 
 from bss_diabetes.extensions import database as db
 from bss_diabetes.models.core import Model
+from bss_diabetes.models.utils import parse_int
 
 
 class DailySample(Model):
     __tablename__ = 'daily_sample'
 
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.String(20), nullable=False)
-    time = db.Column(db.String(20), nullable=False)
-    code = db.Column(db.Integer, nullable=False)
-    value = db.Column(db.String, nullable=False)
+    date = db.Column(db.String(20), nullable=True)
+    time = db.Column(db.String(20), nullable=True)
+    code = db.Column(db.Integer, nullable=True)
+    value = db.Column(db.Numeric, nullable=True)
     patient_id = Column(db.Integer, ForeignKey('patient.id'))
 
     def __init__(self, date, time, code, value):
         self.date = date
         self.time = time
-        self.code = code
-        self.value = value
+        self.code = parse_int(code)
+        self.value = parse_int(value)
 
     @classmethod
     def from_string(cls, line):
