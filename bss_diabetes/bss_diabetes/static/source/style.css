@@ -15,3 +15,7 @@
     border-right: 5px solid #4286f4;
     padding-right: 10px;
 }
+
+.chart-dimensions {
+    max-height: 600px;
+}
