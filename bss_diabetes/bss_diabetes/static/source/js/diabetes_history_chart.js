@@ -1,11 +1,11 @@
-let smokingChart = {
+let diabetesHistoryChart = {
     render: function (ctx, data_values) {
         const config = {
             type: 'bar',
             data: {
-                labels: ['Bez dijabetesa', 'Sa dijabetesom'],
+                labels: ['Nema historije diabetisa', 'Postoji historija diabetisa'],
                 datasets: [{
-                    label: 'Pregled broja pušača sa i bez dijabetesa',
+                    label: 'Broj dijabetičara',
                     data: data_values,
                     backgroundColor: 'rgba(66, 149, 244, 50)',
                     fill: true,
@@ -15,7 +15,7 @@ let smokingChart = {
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Pregled broja dijabetičara nakon prestanka pušenja'
+                    text: 'Pregled broja pacijenata sa historijom diabetisa'
                 },
                 tooltips: {
                     mode: 'index'
@@ -31,11 +31,11 @@ let smokingChart = {
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Broj pacijenata'
+                            labelString: 'Broj dijabetičara'
                         },
                         ticks: {
                             suggestedMin: 10,
-                            suggestedMax: 40,
+                            suggestedMax: 80,
                         }
                     }]
                 }
@@ -47,4 +47,4 @@ let smokingChart = {
     }
 };
 
-export {smokingChart};
+export {diabetesHistoryChart};

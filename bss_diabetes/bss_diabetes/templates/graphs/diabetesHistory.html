@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+    <h1>Diabetes history graph should go here</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <canvas id="diabetesHistoryChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+
+    <script>
+        $(function () {
+            var data_values = {{ data_values | safe }};
+
+            var ctx = document.getElementById('diabetesHistoryChart').getContext('2d');
+            window.myLine = app.charts.diabetesHistory.render(ctx, data_values);
+        });
+    </script>
+{% endblock %}

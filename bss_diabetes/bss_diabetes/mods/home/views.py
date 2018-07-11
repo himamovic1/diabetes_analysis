@@ -13,7 +13,8 @@ class HomeView(FlaskView):
         'activity': 'graphs/activity.html',
         'diet': 'graphs/diet.html',
         'age': 'graphs/age.html',
-        'smoking': 'graphs/smoking.html'
+        'smoking': 'graphs/smoking.html',
+        'diabetesHistory': 'graphs/diabetesHistory.html'
     }
 
     def main(self):
@@ -104,8 +105,25 @@ class HomeView(FlaskView):
             """
             select fbs, count(*) 
             from patient_data 
-            where years_as_smoker is not null and years_as_smoker > 1 and fbs is not null
+            where years_as_smoker is not null and years_as_smoker > 1 and fbs is not null and smoking = 0
             group by fbs
+            """)
+
+        data = [row for row in data_set]
+
+        data_values = [row[1] for row in data]
+
+        return render_template(template, data_values=data_values)
+
+    def diabetesHistory(self):
+        template = self._templates['diabetesHistory']
+
+        data_set = database.engine.execute(
+            """
+            select diabetes_history, count(*) 
+            from patient_data 
+            where diabetes_history is not null and fbs is not null and fbs = 1
+            group by diabetes_history
             """)
 
         data = [row for row in data_set]

@@ -6,13 +6,15 @@ import {dietCharts} from "../source/js/diet_chart";
 import {activityChart} from "../source/js/activity_chart";
 import {ageChart} from '../source/js/age_chart';
 import {smokingChart} from '../source/js/smoking_chart';
+import {diabetesHistoryChart} from '../source/js/diabetes_history_chart';
 
 let charts = {
     home: homeCharts,
     diet: dietCharts,
     activity: activityChart,
     age: ageChart,
-    smoking: smokingChart
+    smoking: smokingChart,
+    diabetesHistory: diabetesHistoryChart
 };
 
 export {charts};
