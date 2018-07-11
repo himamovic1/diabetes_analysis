@@ -41,8 +41,8 @@ let activityChart = {
                             labelString: 'Value'
                         },
                         ticks: {
-                            suggestedMin: 50,
-                            suggestedMax: 200,
+                            suggestedMin: 5,
+                            suggestedMax: 15,
                         }
                     }]
                 }

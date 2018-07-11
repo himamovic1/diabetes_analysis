@@ -47,8 +47,8 @@ let dietCharts = {
                             labelString: 'Value'
                         },
                         ticks: {
-                            suggestedMin: 100,
-                            suggestedMax: 200,
+                            suggestedMin: 5,
+                            suggestedMax: 15,
                         }
                     }]
                 }
