@@ -1,6 +1,3 @@
-import json
-from operator import and_
-
 from flask import render_template
 from flask_classful import FlaskView
 from bss_diabetes.extensions import database
@@ -24,11 +21,7 @@ class HomeView(FlaskView):
         return render_template(template)
 
     def activity(self):
-        # active = [str(n[0]) for n in
-        #           DailySample.query \
-        #               .with_entities(func.avg(DailySample.value).label('avg')) \
-        #               .filter(and_(DailySample.value.isnot(None), DailySample.code.in_((69, 70, 71)))) \
-        #               .all()]
+        from bss_diabetes.extensions import database
         active_set = database.engine.execute(
             """select code, avg(value) as average
                 from daily_sample
@@ -52,8 +45,35 @@ class HomeView(FlaskView):
         return render_template(template, active=active, inactive=inactive)
 
     def diet(self):
+        from bss_diabetes.extensions import database
+        result_set = database.engine.execute("""
+            select ds.code, list.code, avg(ds.value)
+            from daily_sample ds, (
+                select distinct tmp.patient_id as pid, tmp.code as code
+                from daily_sample tmp
+                where tmp.code in (66, 67, 68)
+                order by tmp.code
+            ) as list
+            where ds.patient_id = list.pid
+            group by ds.code, list.code
+            having ds.code in (58, 59, 60, 61, 62, 63)
+            order by ds.code, list.code;
+        """)
+
+        diet_habits = {
+            66: [],
+            67: [],
+            68: [],
+        }
+
+        for row in result_set:
+            diet_habits[row[1]].append(str(row[2]))
+
         template = self._templates['diet']
-        return render_template(template)
+        return render_template(template,
+                               bellow_avg=diet_habits[66],
+                               avg=diet_habits[67],
+                               above_avg=diet_habits[68])
 
     def age(self):
         template = self._templates['age']
