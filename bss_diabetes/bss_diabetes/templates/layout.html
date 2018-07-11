@@ -12,16 +12,18 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="row">
             {% block sidebar %}
             {% include 'sidebar.html' %}
             {% endblock %}
         </div>
     </div>
-    <div class="col-md-10">
-        {% block page_content %}
+    <div class="col-md-7">
+        <div class="row p-x-20">
+            {% block page_content %}
         {% endblock %}
+        </div>
     </div>
 </div>
 {% endblock %}

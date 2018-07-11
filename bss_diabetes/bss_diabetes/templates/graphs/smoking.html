@@ -3,15 +3,19 @@
 {% block page_content %}
     <h1>Uticaj prestanka pušenja na razvoj dijabetesa</h1>
     <p>
-        Prestanak pušenja smanjuje rizik za dobivanje komplikacija povezanih s dijabetesom. Pušenje ometa tijelo da normalno koristi inzulin te tako razvija dijabetes tipa 2.
-        Bivši pušači i dalje imaju
+        Korištenjem skupa podataka <a href="http://archive.ics.uci.edu/ml/datasets/Heart+Disease">Heart Disease Data Set </a> izvršena je analiza s ciljem utvrđivanja uticaja prestanka pušenja na dijabetes.
+        Korišteni su podaci o pacijentima koji su bili višegodišnji pušači međutim koji trenutno ne puše.
     </p>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 chart-dimensions">
-                <canvas id="smokingChart" width="400" height="400"></canvas>
-            </div>
-        </div>
+    <p>
+        Prema rezultatima analize pokazano je da prestanak pušenja smanjuje rizik za dobivanje komplikacija povezanih s dijabetesom.
+        Pušenje ometa tijelo da normalno koristi inzulin te se na taj način povećava šansa za razvoj dijabetesa tipa 2.
+        Na sljedećem dijagramu prikazan je odnos broja osoba koje boluju od dijabetesa nakon prestanka pušenja. Broj osoba koje nakon prestanka pušenja nemaju dijabetes je 29,
+        dok je broj osoba koje nakon prestanka pušenja imaju diabetes je 26.
+    </p>
+
+
+    <div class="col-sm-8 col-sm-offset-2 chart-dimensions">
+        <canvas id="smokingChart" width="400" height="400"></canvas>
     </div>
 {% endblock %}
 

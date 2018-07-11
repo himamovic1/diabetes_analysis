@@ -5,7 +5,7 @@ let smokingChart = {
             data: {
                 labels: ['Bez dijabetesa', 'Sa dijabetesom'],
                 datasets: [{
-                    label: 'Pregled broja pušača sa i bez dijabetesa',
+                    label: 'Broj bivših pušača',
                     data: data_values,
                     backgroundColor: 'rgba(66, 149, 244, 50)',
                     fill: true,

@@ -1,14 +1,18 @@
 {% extends "layout.html" %}
 
 {% block page_content %}
-    <h1>Age graph should go here</h1>
+    <h1>Razvoj dijabetesa po starosnoj dobi</h1>
+    <p>
+        Korištenjem skupa podataka <a href="http://archive.ics.uci.edu/ml/datasets/Heart+Disease">Heart Disease Data Set </a> izvršena je analiza s ciljem utvrđivanja starosne dobi u kojem je najveća vjerovatnoća za razvoj dijabetesa.
+        Dijabetes se najmanje javlja kod osoba mlađih od trideset godina, u periodu od trideset do četrdeset godina počinje rasti vjerovatnoća za razvoj dijabetesa,
+        dijabetes se u najvećoj mjeri javlja kod osoba u životnoj dobi iznad pedeset godina.
+    </p>
+    <p>
+        Na sljedećem dijagramu prikazane su dobijene vrijednosti broja dijabetičara prema starosnoj dobi. Radi jednostavnijeg prikaza broja dijabetičara starosne dobi su podijeljene u četiri segmenta i to: osobe između trideset i četrdeset godina, četrdeset i pedeset godina, osobe između pedeset i šezdeset godina, te osobe starije od šezdeset godina.
+    </p>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 chart-dimensions">
-                <canvas id="ageChart" width="400" height="400"></canvas>
-            </div>
-        </div>
+    <div class="col-sm-8 col-sm-offset-2 chart-dimensions">
+        <canvas id="ageChart" width="400" height="400"></canvas>
     </div>
 {% endblock %}
 

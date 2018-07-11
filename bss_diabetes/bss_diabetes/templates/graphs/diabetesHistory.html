@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
 {% block page_content %}
-    <h1>Diabetes history graph should go here</h1>
+    <h1>Uticaj nasljednih faktora na dijabetes</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <canvas id="diabetesHistoryChart" width="400" height="400"></canvas>
-            </div>
-        </div>
+    <p>
+        Nasljedni faktori često igraju glavnu ulogu u pojavi dijabetesa kod određene individue.
+    </p>
+
+    <div class="col-sm-8 col-sm-offset-2 chart-dimensions">
+        <canvas id="diabetesHistoryChart" width="400" height="400"></canvas>
     </div>
 {% endblock %}
 
