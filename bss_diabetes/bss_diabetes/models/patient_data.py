@@ -10,7 +10,7 @@ class PatientData(Model):
 
     age = db.Column(db.Integer, unique=False, nullable=True)
     sex = db.Column(db.Integer, unique=False, nullable=True)
-    resting_blood_sugar = db.Column(db.Integer, unique=False, nullable=True)
+    resting_blood_pressure = db.Column(db.Integer, unique=False, nullable=True)
     smoking = db.Column(db.Integer, unique=False, nullable=True)
     cigs_per_day = db.Column(db.Integer, unique=False, nullable=True)
     years_as_smoker = db.Column(db.Integer, unique=False, nullable=True)
@@ -18,12 +18,12 @@ class PatientData(Model):
     diabetes_history = db.Column(db.Integer, unique=False, nullable=True)
     num = db.Column(db.Integer, unique=False, nullable=True)
 
-    def __init__(self, age, sex, resting_blood_sugar, smoking, cigs_per_day,
+    def __init__(self, age, sex, resting_blood_pressure, smoking, cigs_per_day,
                  years_as_smoker, fbs, diabetes_history, num):
 
         self.sex = parse_int(sex)
         self.age = parse_int(age)
-        self.resting_blood_sugar = parse_int(resting_blood_sugar)
+        self.resting_blood_pressure = parse_int(resting_blood_pressure)
         self.smoking = parse_int(smoking)
         self.cigs_per_day = parse_int(cigs_per_day)
         self.years_as_smoker = parse_int(years_as_smoker)
@@ -45,7 +45,7 @@ class PatientData(Model):
             'id': self.id,
             'age': self.age,
             'sex': self.sex,
-            'resting_blood_sugar': self.resting_blood_sugar,
+            'resting_blood_pressure': self.resting_blood_pressure,
             'smoking': self.smoking,
             'cigs_per_day': self.cigs_per_day,
             'years_as_smoker': self.years_as_smoker,
