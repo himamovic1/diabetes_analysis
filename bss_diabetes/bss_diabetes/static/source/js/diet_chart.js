@@ -44,11 +44,11 @@ let dietCharts = {
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Value'
+                            labelString: 'Koncentracija glukoze (mmol/L)'
                         },
                         ticks: {
-                            suggestedMin: 100,
-                            suggestedMax: 200,
+                            suggestedMin: 7,
+                            suggestedMax: 12,
                         }
                     }]
                 }

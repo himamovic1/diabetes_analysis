@@ -38,11 +38,11 @@ let activityChart = {
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Value'
+                            labelString: 'Koncentracija glukoze (mmol/L)'
                         },
                         ticks: {
-                            suggestedMin: 50,
-                            suggestedMax: 200,
+                            suggestedMin: 7,
+                            suggestedMax: 12,
                         }
                     }]
                 }

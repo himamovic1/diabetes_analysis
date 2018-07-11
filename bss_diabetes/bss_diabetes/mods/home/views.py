@@ -1,9 +1,7 @@
 from flask import render_template
 from flask_classful import FlaskView
-from bss_diabetes.extensions import database
-from sqlalchemy import func
 
-from bss_diabetes.models.patient import DailySample
+from bss_diabetes.extensions import database
 
 
 class HomeView(FlaskView):
